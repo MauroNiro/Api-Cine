@@ -85,7 +85,7 @@ namespace Api_Cine.Data.Migrations
                 columns: new[] { "MovieId", "DirectorId", "IsNational", "Length", "MovieImg", "MovieName" },
                 values: new object[,]
                 {
-                    { 1, 1, false, 120, "https://static.wikia.nocookie.net/esstarwars/images/7/75/EPI_TPM_poster.png/revision/latest/scale-to-width-down/1000?cb=20240316183455", "Star Wars ep1" },
+                    { 1, 1, false, 120, "https://i.ebayimg.com/images/g/~iwAAOSwlkhdj3yZ/s-l1200.jpg", "Star Wars ep1" },
                     { 2, 1, false, 120, "https://i.pinimg.com/originals/06/34/3c/06343c9d80c8d13be65c412b5cd5e81e.png", "Star Wars ep2" },
                     { 3, 2, false, 120, "https://i.pinimg.com/736x/01/fd/98/01fd9847e3bf83bc01f7f59ff2ee50ca.jpg", "Matrix" },
                     { 4, 3, true, 120, "https://www.lahiguera.net/cinemania/pelicula/6272/relatos_salvajes-cartel-5709.jpg", "Relatos Salvajes" }

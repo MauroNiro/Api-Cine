@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Api_Cine.Data.Migrations
 {
     [DbContext(typeof(MovieTheaterContext))]
-    [Migration("20240917172444_SeedMoviesDirectors")]
+    [Migration("20240918134234_SeedMoviesDirectors")]
     partial class SeedMoviesDirectors
     {
         /// <inheritdoc />
@@ -88,7 +88,7 @@ namespace Api_Cine.Data.Migrations
                             DirectorId = 1,
                             IsNational = false,
                             Length = 120,
-                            MovieImg = "https://static.wikia.nocookie.net/esstarwars/images/7/75/EPI_TPM_poster.png/revision/latest/scale-to-width-down/1000?cb=20240316183455",
+                            MovieImg = "https://i.ebayimg.com/images/g/~iwAAOSwlkhdj3yZ/s-l1200.jpg",
                             MovieName = "Star Wars ep1"
                         },
                         new

@@ -6,16 +6,19 @@ namespace Cine_API.Endpoints
 {
     public static class MoviesEndpoints
     {
-       
+
         public static RouteGroupBuilder MapMoviesEndpoint(this WebApplication app)
         {
             var group = app.MapGroup("movies");
             //GET movies
-            group.MapGet("/",async (MovieTheaterContext dbContext) =>
-                await dbContext.Movies
-                       .Select(movie => movie.ToDto())
-                       .AsNoTracking()
-                       .ToListAsync());
+            group.MapGet("/", async (MovieTheaterContext dbContext) =>
+            {
+                var movies = await dbContext.Movies
+                        .Select(movie => movie.ToDto())
+                        .AsNoTracking()
+                        .ToListAsync();
+                return Results.Ok(movies);
+            });
             return group;
         }
     }
