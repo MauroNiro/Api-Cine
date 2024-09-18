@@ -15,6 +15,14 @@ namespace Cine_API.Endpoints
                        .Select(director => director.ToDto())
                        .AsNoTracking()
                        .ToListAsync());
+            group.MapGet("/{directorId}", async (int directorId, MovieTheaterContext dbContext) =>
+            {
+                var director = await dbContext.Directors.FindAsync(directorId);
+                if (director == null)
+                    return Results.BadRequest("DirectorId doesn't exist");
+                return Results.Ok(director.ToDto());
+            });
+                
             return group;
         }
     }
